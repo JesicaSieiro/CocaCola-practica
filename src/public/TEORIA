@@ -1,0 +1,40 @@
+- '*' aplica el estilo a todos los elementos
+
+-los elementos de tipo bloque ocupan todo el ancho de la pantalla (section)
+como el div es un elemento bloque si le damos un tamaño mas chico que la pantalla automaticamente genera un margen
+
+-los elementos de tipo inline no ocupan todo el ancho y se pueden alinear uno al lado del oyro (img, a)
+
+- display: es para modificar el comportamiento de un elemento
+- display: inline-block -> hace que los elementos se coloquen uno al lado del otro pero respeten el alto que le coloque a ese elemento
+- inline pone los elementos uno al lado del otro
+- flex -> aprovecha el espacio que tenga el elemento para acomodar a sus hijos (es decir las etiquetas que tengan adentro)-usamos de manera flexible es espacio que tenemos para acomodar los elementos que estan dentro
+
+- justify-content -> trabaja en base al eje x. Alinea los elementos en baso al eje x
+- space-between -> hace que los elementos en el espacio que tienen se acomoden de tal manera que si hay dos elementos uno vaya a la derecha y otro a la izquierda, si hay tres uno va a la derecha, otro al centro y otro a la izquierda, pero el espacio entre ellos seria el mismo
+
+-padding -> es el espacio hacia adentro del elemento
+- margin -> es el espacio hacia afuera del elemento
+- margenes auto, aprovecha los espacios hacia los lados (centra el elemento)
+
+- Todos los elementos pos defecto tienen la posision estatica
+-posision relativa me permite mover ese elemento con las propiedades 'top, bottom, left, right, z-index (que esta relacionado al eje z)'. El espacio va a permanecer pero el elemento podria moverce a la derecha por ejemplo
+(es decir que se mueve el bloque pero el espacio reservado se queda por lo que los demas elementos de alrededor se quedan donde estan)
+
+la posicion absoluta no tiene su espacio reservado,(esta como flotando, ya no existe su espacio) sino que lo coloco donde quiero usando las propiedades top, bottom, left, right, z-index. En tonces los elementos que estan alrededor de van a acomodar como si no estuviera
+La posicion absoluta SOLO funciona bien si esta dentro de otro elemento con posicion relativa o absoluta. Porque su posision se va a basar en el elemento padre que lo contiene
+- z-index es como si fueran capas, si no ocupa un espacio los demas elementos se pueden poner encima
+
+la posicion fixed lo pone fijo al elemento y te persiga cuando haces scroll
+
+-si queremos que las columnas se coloquen una al lado de la otra tenemos que usar flex para distribuir los elementos de la mejor manera
+ponemos FLEX a los elementos donde queremos que los hijos se distribuyan de la mejor manera
+
+-flex-wrap: wrap -> quiere decir que si alguna de las columnas por su ancho no llego a entrar, esa columna se va a ir hacia abajo
+-flex:no-wrap-> siempre sea cual fuere el ancho de una columna, si o si van a entrar todas las columnas 
+
+cada vez que usemos el height tenemos que preguntarnos (usando %) el alto de qué? del padre. pero si el padreno tiene un tamaño fijo no va a funcionar. (y si ponemos alto fijo al pafe, si colocas texto mas grande se va a romper. el alto tiene que depender de lo que tenga dentro, entonces usamos % y en ese caso el height no va a funcionar)
+
+para generar un alto y hacer un cuadrado perfecto usamos "padding-bottom=100%" porque no podemos usar un height con porcentaje
+
+object-fit: cover, es una propiedad de img que es para cubrir todo el espacio con la imagen 
